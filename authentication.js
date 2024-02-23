@@ -97,7 +97,7 @@ let cartItems = [];
 
 function addProductToCart(id, img, name, price, stock, quantity){
     if (localStorage.getItem('carts')){
-        var existingCartItems = JSON.parse(localStorage.getItem('carts'));
+        var existingCartItems = JSON.parse(location.getItem('carts'));
         cartItems = [...existingCartItems];
     }
 
