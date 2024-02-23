@@ -85,6 +85,13 @@ function logout(){
     localStorage.removeItem('currentUser');
     window.location.href = 'login.html';
 }
+window.onload = function() {
+    var currentUser = getLoggedInUser();
+    var currentPage = window.localStorage.pathname;
+    if (!currentUser && currentPage !== '/signup.html'){
+        window.location.href = 'login.html';
+    }
+};
 
 let cartItems = [];
 
